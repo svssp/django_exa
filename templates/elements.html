@@ -1,0 +1,28 @@
+{%extends 'basic.html'%}
+
+{%block content%}
+<h4>To add a new element <a href="newelement">here</a></h4>
+{%for i in users%}
+<div class="media" id={{ i.id|stringformat:"i" }}>
+    <div class="media-body">
+        <div class="media-heading">
+            <h3>{{i.name}} ({{i.category}})</h3>
+        </div>
+        {%if i.ref%}
+        <p><b>Ref:</b><a href={{i.ref}}>{{i.ref}}</a></p>
+        {%endif%}
+        {%if i.city%}
+        <p><b>Location:</b>{{i.city}}</p>
+        {%endif%}
+        {%if i.desc%}
+        <p class="text-muted">{{i.desc}}</p>
+        {%endif%}
+    </div>
+<div class="media-right">
+    <img src={{i.img}} style="width:200px">
+</div>
+</div>
+<hr/>
+
+{%endfor%}
+{%endblock%}
