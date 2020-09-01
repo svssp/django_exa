@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'arrow.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', #there is sqlite3 db by default. i am using mysql db that's why i changed it too .mysql
-        'NAME': 'svssp',
+        'NAME': '******',
         'USER':'root',
-        'PASSWORD':'#Include1',
-        'HOST':'localhost'
+        'PASSWORD':'*******',
+        'HOST':'********'
     }
 }
 
